@@ -9,7 +9,6 @@ function refreshWeather(response) {
   let windSpeedElement = document.querySelector(`#wind`);
   let currentDateElement = document.querySelector(`#current-date`);
   let date = new Date(response.data.time * 1000);
-  console.log(response.data);
 
   currentDateElement.innerHTML = formateDate(date);
   currentCityElement.innerHTML = response.data.city;
@@ -33,6 +32,9 @@ function formateDate(date) {
   ];
 
   let day = days[date.getDay()];
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
   return `${day} ${hours}:${minutes}`;
 }
 
