@@ -47,3 +47,34 @@ main {
   justify-content: space-between;
   padding: 15px 20px;
 }
+.current-city {
+  font-size: 50px;
+  font-weight: 800;
+  margin: 10px auto;
+  unicode-bidi: isolate;
+}
+.weather-details {
+  color: grey;
+  line-height: 1.5;
+}
+.current-temperature {
+  display: block;
+  unicode-bidi: isolate;
+}
+.current-temperature-icon {
+  position: relative;
+  top: 5px;
+  font-size: 40px;
+  margin-right: 10px;
+}
+.current-temperature-value {
+  font-size: 80px;
+  font-weight: bold;
+  position: relative;
+  top: 10px;
+}
+.current-temperature-unit {
+  font-size: 28px;
+  position: relative;
+  top: -28px;
+}
