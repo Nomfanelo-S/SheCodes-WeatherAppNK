@@ -3,24 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="styles.css" href="src/styles.css" />
     <title>SheCodes Weather App</title>
   </head>
   <body>
+    <div class="container">
     <header>
-      <form>
-        <input type="search" />
-        <input type="submit" />
+        <div>
+          <form>
+        <input type="search" class="search" placeholer="Enter a city" id="search-input"required/>
+        <input type="submit" class="search-button" id="search-button"/>
       </form>
     </header>
     <main>
       <div>
-        <h1>Johannesburg</h1>
+        <h1 class="current-city" id="current-id">Johannesburg</h1>
         <p>
-          Saturday 15:32, moderate rain <br />
-          Humidity: 12% Wind: 5 km/h
+          <span class="current-date"></span>Saturday 15:32, moderate rain <br />
+          Humidity: <strong>12%</strong> Wind: <strong>5 km/h</strong>
         </p>
       </div>
-      <div>🌧️ 12 °C</div>
+      <div class="current-temperature">
+        <span class="current-temperature-icon">🌧️</span> 
+        <span class="current-temperature-value">12</span>
+        <span class="current-temperature-unit">°C</span></div>
     </main>
 
     <footer>
@@ -38,6 +44,8 @@
       <a href="https://skhosanaweatherapp.netlify.app/" target="_blank"
         >Netlify</a
       >
-    </footer>
+    </footer>   
+        </div>
+     
   </body>
 </html>
