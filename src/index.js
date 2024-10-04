@@ -11,12 +11,29 @@ function refreshWeather(response) {
   let date = new Date(response.data.time * 1000);
   console.log(response.data);
 
-  currentDateElement.innerHTML = `${date.getDay()} ${date.getHours() ${date.getMinutes}}`
+  currentDateElement.innerHTML = formateDate(date);
   currentCityElement.innerHTML = response.data.city;
   weatherDescription.innerHTML = response.data.condition.description;
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
   windSpeedElement.innerHTML = `${response.data.wind.speed} km/h`;
   currentTemperatureElement.innerHTML = Math.round(temperature);
+}
+function formateDate(date) {
+  let hours = date.getHours();
+  let minutes = date.getMinutes();
+
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+
+  let day = days[date.getDay()];
+  return `${day} ${hours}:${minutes}`;
 }
 
 function searchCity(city) {
