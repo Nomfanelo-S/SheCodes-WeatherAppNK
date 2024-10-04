@@ -42,3 +42,8 @@ main {
   cursor: pointer;
   border: 1px solid black;
 }
+.weather-status {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+}
