@@ -27,3 +27,5 @@ function searchEngine(event) {
 
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", searchEngine);
+
+searchCity("Johannesburg");
